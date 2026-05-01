@@ -1,628 +1,563 @@
 <!doctype html>
 <html lang="ru">
-
-<head>
-    <title>Регистрация команды — NEScO</title>
+  <head>
+    <title>Регистрация команды — NEScO 2025</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Регистрация команды на National Engineering & Science Olympiad" />
+    <meta name="description" content="Регистрация команды на National Engineering & Science Olympiad 2025" />
     <meta property="og:title" content="Регистрация — NEScO" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png"
-        href="/images/16x16/15272829/NEScOwhite-L-l3mLjtlMNfQ2gCwnxmqw-T9tmA2pJdq7AF4JR2j44SQ.png" sizes="16x16" />
-    <link rel="icon" type="image/png"
-        href="/images/32x32/15272829/NEScOwhite-L-l3mLjtlMNfQ2gCwnxmqw-T9tmA2pJdq7AF4JR2j44SQ.png" sizes="32x32" />
-    <link rel="icon" type="image/png"
-        href="/images/96x96/15272829/NEScOwhite-L-l3mLjtlMNfQ2gCwnxmqw-T9tmA2pJdq7AF4JR2j44SQ.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/images/16x16/15272829/NEScOwhite-L-l3mLjtlMNfQ2gCwnxmqw-T9tmA2pJdq7AF4JR2j44SQ.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/images/32x32/15272829/NEScOwhite-L-l3mLjtlMNfQ2gCwnxmqw-T9tmA2pJdq7AF4JR2j44SQ.png" sizes="32x32" />
     <link rel="stylesheet" type="text/css" media="screen" href="/webcard/static/app.min.1773313769.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/custom.250409191453.css" id="customcss" />
-    <link rel="preload" as="style"
-        href="/g/fonts.css?family=Playfair+Display:300,regular,700%7CWork+Sans:300,regular,700%7CRoboto:300,regular,700&subset=latin&display=swap" />
-    <link rel="stylesheet" media="print" onload="this.media='all'"
-        href="/g/fonts.css?family=Playfair+Display:300,regular,700%7CWork+Sans:300,regular,700%7CRoboto:300,regular,700&subset=latin&display=swap" />
+    <link rel="preload" as="style" href="/g/fonts.css?family=Playfair+Display:300,regular,700%7CRoboto:300,regular,400,700&subset=latin&display=swap" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="/g/fonts.css?family=Playfair+Display:300,regular,700%7CRoboto:300,regular,400,700&subset=latin&display=swap" />
     <style>
-        figure {
-            margin: 0;
+      *, *::before, *::after { box-sizing: border-box; }
+      figure { margin: 0; }
+      body { margin: 0; background: #fff; }
+
+      /* ── NAV — identical to the existing site nav ── */
+      .rn-nav-wrap {
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+      }
+      .rn-nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .rn-nav__logo img { width: 110px; display: block; }
+      .rn-nav__menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+        margin: 0; padding: 0;
+      }
+      .rn-nav__menu a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: #0b0d17;
+        text-decoration: none;
+        letter-spacing: 1px;
+        transition: color .2s;
+        white-space: nowrap;
+      }
+      .rn-nav__menu a:hover { color: #7a3afe; }
+      .rn-nav__menu a.highlight {
+        color: #7a3afe;
+        font-weight: 700;
+      }
+      .rn-nav__langs {
+        display: flex;
+        gap: .4rem;
+        flex-shrink: 0;
+      }
+      .rn-nav__langs a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: .3rem .6rem;
+        background: #f8f5ff;
+        color: #7a3afe;
+        text-decoration: none;
+        transition: background .2s, color .2s;
+        border: 1px solid #eeeaf7;
+      }
+      .rn-nav__langs a:hover,
+      .rn-nav__langs a.active {
+        background: #7a3afe;
+        color: #fff;
+        border-color: #7a3afe;
+      }
+      .rn-nav__burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+      }
+      .rn-nav__burger span {
+        display: block;
+        width: 26px; height: 2px;
+        background: #0b0d17;
+        border-radius: 2px;
+        transition: all .3s;
+      }
+      @media (max-width: 900px) {
+        .rn-nav__menu {
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          inset: 0;
+          background: #150040;
+          z-index: 200;
+          gap: 2.5rem;
         }
+        .rn-nav__menu.open { display: flex; }
+        .rn-nav__menu a { color: #fff; font-size: 22px; }
+        .rn-nav__menu a.highlight { color: #7a3afe; }
+        .rn-nav__burger { display: flex; z-index: 201; }
+      }
 
-        /* ── Page layout ─────────────────────────────────────────────── */
-        .reg-hero {
-            background: linear-gradient(81deg, #fff 0%, #7a3afe 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+      /* ── HERO — dark, same as site ── */
+      .rn-hero {
+        background: #150040;
+        background-image: url(/images/0/5913601/Vector.png);
+        background-repeat: no-repeat;
+        background-size: 500px auto;
+        background-position: right -50px bottom;
+        padding: 5rem 2rem 5rem;
+      }
+      .rn-hero__inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .rn-hero__tag {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #7a3afe;
+        margin-bottom: 1.25rem;
+      }
+      .rn-hero__title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(36px, 5vw, 56px);
+        font-weight: 700;
+        color: #fff;
+        text-align: left;
+        margin: 0 0 1.25rem;
+        line-height: 1.15;
+      }
+      .rn-hero__sub {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.65);
+        margin: 0;
+        max-width: 540px;
+      }
 
-        /* ── Nav (mirrors existing site nav) ─────────────────────────── */
-        .reg-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2% 2%;
-            background: #fff;
-            position: relative;
-            flex-shrink: 0;
-        }
+      /* ── FORM SECTION ── */
+      .rn-body {
+        background: #fff;
+        padding: 4rem 2rem 6rem;
+      }
+      .rn-body__inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
 
-        .reg-nav__logo img {
-            width: 120px;
-        }
+      /* Section headings inside form */
+      .rn-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 2.5rem 0 1.5rem;
+      }
+      .rn-section:first-child { margin-top: 0; }
+      .rn-section__num {
+        width: 32px; height: 32px;
+        border-radius: 50%;
+        background: #7a3afe;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .rn-section__title {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #0b0d17;
+        text-align: left;
+        margin: 0;
+      }
 
-        .reg-nav__menu {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+      /* Grid layout */
+      .rn-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .875rem 1.5rem;
+      }
+      @media (max-width: 560px) { .rn-grid { grid-template-columns: 1fr; } }
+      .rn-full { grid-column: 1 / -1; }
 
-        .reg-nav__menu a {
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            color: #0b0d17;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: color .3s;
-        }
+      /* Fields */
+      .rn-field { display: flex; flex-direction: column; gap: .4rem; }
+      .rn-field label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #848199;
+      }
+      .rn-field input,
+      .rn-field select {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: #0b0d17;
+        background: #fff;
+        border: 1.5px solid #eeeaf7;
+        padding: .7rem 1rem;
+        outline: none;
+        transition: border-color .2s, box-shadow .2s;
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .rn-field input::placeholder { color: #c0bad8; }
+      .rn-field input:focus,
+      .rn-field select:focus {
+        border-color: #7a3afe;
+        box-shadow: 0 0 0 3px rgba(122,58,254,0.12);
+      }
+      .rn-field--error input,
+      .rn-field--error select {
+        border-color: #e53e3e;
+      }
 
-        .reg-nav__menu a:hover {
-            color: #7a3afe;
-        }
+      /* Divider */
+      .rn-divider {
+        border: none;
+        border-top: 1.5px solid #eeeaf7;
+        margin: 2rem 0;
+      }
 
-        .reg-nav__langs {
-            display: flex;
-            gap: .5rem;
-        }
+      /* Consent */
+      .rn-consent {
+        display: flex;
+        align-items: flex-start;
+        gap: .75rem;
+        margin-top: 1.75rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: #848199;
+        line-height: 1.6;
+      }
+      .rn-consent input[type="checkbox"] {
+        width: 18px; height: 18px;
+        flex-shrink: 0;
+        margin-top: 2px;
+        accent-color: #7a3afe;
+        cursor: pointer;
+        border: 1.5px solid #eeeaf7;
+      }
 
-        .reg-nav__langs a {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            padding: .25rem .5rem;
-            background: #7a3afe;
-            color: #fff;
-            border-radius: 0;
-            text-decoration: none;
-            transition: background .3s;
-        }
+      /* Submit */
+      .rn-submit-row {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .rn-submit {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        padding: .875rem 2.5rem;
+        background: #7a3afe;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background .25s, transform .15s;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .rn-submit:hover { background: #3a3c3b; }
+      .rn-submit:active { transform: scale(.98); }
+      .rn-submit:disabled { background: #c0bad8; cursor: not-allowed; }
 
-        .reg-nav__langs a:hover,
-        .reg-nav__langs a.active {
-            background: #3a3c3b;
-        }
+      /* Messages */
+      .rn-msg {
+        display: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        padding: .875rem 1.25rem;
+      }
+      .rn-msg.success {
+        background: #f8f5ff;
+        border-left: 3px solid #7a3afe;
+        color: #0b0d17;
+      }
+      .rn-msg.error {
+        background: #fff5f5;
+        border-left: 3px solid #e53e3e;
+        color: #c53030;
+      }
+      .rn-msg.show { display: block; }
 
-        /* Mobile hamburger */
-        .reg-nav__burger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-        }
-
-        .reg-nav__burger span {
-            display: block;
-            width: 28px;
-            height: 2px;
-            background: #0b0d17;
-            border-radius: 2px;
-            transition: all .3s;
-        }
-
-        @media (max-width: 60.9375rem) {
-            .reg-nav__menu {
-                display: none;
-                flex-direction: column;
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                width: 70%;
-                background: #150040;
-                z-index: 100;
-                padding: 4rem 2rem;
-                gap: 2rem;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .reg-nav__menu.open {
-                display: flex;
-            }
-
-            .reg-nav__menu a {
-                color: #fff;
-                font-size: 24px;
-            }
-
-            .reg-nav__burger {
-                display: flex;
-            }
-        }
-
-        @media (max-width: 35.9375rem) {
-            .reg-nav__menu {
-                width: 100%;
-            }
-        }
-
-        /* ── Form section ────────────────────────────────────────────── */
-        .reg-main {
-            flex: 1;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 4rem 1rem 6rem;
-        }
-
-        .reg-card {
-            background: #150040;
-            background-image: url(/images/0/5913601/Vector.png);
-            background-repeat: no-repeat;
-            background-size: 350px auto;
-            background-position: 105% bottom;
-            border-radius: 0;
-            padding: 3rem 3.5rem;
-            max-width: 760px;
-            width: 100%;
-            color: #fff;
-        }
-
-        @media (max-width: 575px) {
-            .reg-card {
-                padding: 2rem 1rem;
-            }
-        }
-
-        .reg-card__eyebrow {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #7a3afe;
-            margin-bottom: .75rem;
-        }
-
-        .reg-card__title {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: #fff;
-            text-align: left;
-            margin-bottom: .5rem;
-            line-height: 1.2;
-        }
-
-        @media (max-width: 575px) {
-            .reg-card__title {
-                font-size: 28px;
-            }
-        }
-
-        .reg-card__subtitle {
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.75);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        .reg-divider {
-            border: none;
-            border-top: 2px solid rgba(122, 58, 254, 0.4);
-            margin: 1.75rem 0;
-        }
-
-        .reg-section-label {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            color: #fff;
-            text-align: left;
-            margin-bottom: 1.25rem;
-            font-weight: 700;
-        }
-
-        /* ── Form grid ────────────────────────────────────────────────── */
-        .reg-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem 1.5rem;
-        }
-
-        @media (max-width: 575px) {
-            .reg-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .reg-grid--full {
-            grid-column: 1 / -1;
-        }
-
-        .reg-field {
-            display: flex;
-            flex-direction: column;
-            gap: .4rem;
-        }
-
-        .reg-field label {
-            font-family: 'Roboto', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .reg-field input,
-        .reg-field select {
-            font-family: 'Roboto', sans-serif;
-            font-size: 15px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(122, 58, 254, 0.5);
-            color: #fff;
-            padding: .65rem .9rem;
-            border-radius: 0;
-            outline: none;
-            transition: border-color .25s, background .25s;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .reg-field input::placeholder {
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        .reg-field input:focus,
-        .reg-field select:focus {
-            border-color: #7a3afe;
-            background: rgba(122, 58, 254, 0.12);
-        }
-
-        .reg-field select option {
-            background: #150040;
-            color: #fff;
-        }
-
-        /* ── Consent ──────────────────────────────────────────────────── */
-        .reg-consent {
-            display: flex;
-            align-items: flex-start;
-            gap: .75rem;
-            margin-top: 1.5rem;
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.5;
-        }
-
-        .reg-consent input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            flex-shrink: 0;
-            margin-top: 2px;
-            accent-color: #7a3afe;
-            cursor: pointer;
-        }
-
-        /* ── Submit button ────────────────────────────────────────────── */
-        .reg-submit {
-            margin-top: 2rem;
-            width: 100%;
-            padding: .85rem 2rem;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            background: #7a3afe;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background .3s, transform .15s;
-            border-radius: 0;
-        }
-
-        .reg-submit:hover {
-            background: #3a3c3b;
-        }
-
-        .reg-submit:active {
-            transform: scale(.98);
-        }
-
-        .reg-submit:disabled {
-            background: #848199;
-            cursor: not-allowed;
-        }
-
-        /* ── Messages ─────────────────────────────────────────────────── */
-        .reg-message {
-            display: none;
-            margin-top: 1.5rem;
-            padding: 1rem 1.25rem;
-            font-family: 'Roboto', sans-serif;
-            font-size: 15px;
-            border-radius: 0;
-            line-height: 1.5;
-        }
-
-        .reg-message.success {
-            background: rgba(122, 58, 254, 0.2);
-            border: 1px solid #7a3afe;
-            color: #fff;
-        }
-
-        .reg-message.error {
-            background: rgba(200, 50, 50, 0.2);
-            border: 1px solid #c83232;
-            color: #fbb;
-        }
-
-        .reg-message.show {
-            display: block;
-        }
-
-        /* ── Footer ───────────────────────────────────────────────────── */
-        .reg-footer {
-            background: #150040;
-            padding: 2.5rem 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .reg-footer__logo img {
-            width: 100px;
-        }
-
-        .reg-footer__contact {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-            text-align: right;
-            line-height: 1.8;
-        }
-
-        .reg-footer__contact a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .reg-footer__contact a:hover {
-            text-decoration: underline;
-        }
-
-        .reg-footer__icon svg {
-            fill: #fff;
-            width: 24px;
-            height: 24px;
-        }
+      /* ── FOOTER ── */
+      .rn-footer {
+        background: #150040;
+        padding: 2.5rem 2rem;
+      }
+      .rn-footer__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .rn-footer__logo img { width: 90px; display: block; }
+      .rn-footer__contact {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: rgba(255,255,255,0.5);
+        line-height: 1.8;
+        text-align: right;
+      }
+      .rn-footer__contact a {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        transition: color .2s;
+      }
+      .rn-footer__contact a:hover { color: #fff; }
     </style>
-</head>
+  </head>
+  <body>
 
-<body>
-
-    <!-- ══ NAV ══════════════════════════════════════════════════════ -->
-    <div class="reg-hero">
-        <nav class="reg-nav">
-            <a href="/ru" class="reg-nav__logo">
-                <img src="/images/149/15248642/logo2-eaRu4CpcSUUG0yx_VFAUbA.png" alt="NEScO logo" />
-            </a>
-            <ul class="reg-nav__menu" id="navMenu">
-                <li><a href="/ru#ed-646418025">Описание</a></li>
-                <li><a href="/ru#ed-646418145">Правила</a></li>
-                <li><a href="/ru/team">Команда</a></li>
-                <li><a href="/ru#ed-647175036">Партнёры</a></li>
-                <li><a href="/ru#ed-647173895">Контакты</a></li>
-            </ul>
-            <div class="reg-nav__langs">
-                <a href="/kk/register" class="reg-nav__lang">KZ</a>
-                <a href="/en/register" class="reg-nav__lang">EN</a>
-                <a href="/ru/register" class="reg-nav__lang active">RU</a>
-            </div>
-            <button class="reg-nav__burger" id="burgerBtn" aria-label="Меню">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-
-        <!-- ══ MAIN ══════════════════════════════════════════════════ -->
-        <main class="reg-main">
-            <div class="reg-card">
-                <p class="reg-card__eyebrow">NEScO 2025</p>
-                <h1 class="reg-card__title">Регистрация команды</h1>
-                <p class="reg-card__subtitle">
-                    Заполните форму ниже, чтобы зарегистрировать свою команду.<br>
-                    Убедитесь, что название команды уникально — повторные регистрации с тем же именем не принимаются.
-                </p>
-
-                <form id="regForm" novalidate>
-
-                    <!-- CAPTAIN -->
-                    <p class="reg-section-label">Капитан команды</p>
-                    <div class="reg-grid">
-                        <div class="reg-field reg-grid--full">
-                            <label for="teamName">Название команды *</label>
-                            <input type="text" id="teamName" name="team_name" placeholder="Уникальное название команды"
-                                required />
-                        </div>
-                        <div class="reg-field">
-                            <label for="captainName">ФИО капитана *</label>
-                            <input type="text" id="captainName" name="captain_name" placeholder="Иванов Иван Иванович"
-                                required />
-                        </div>
-                        <div class="reg-field">
-                            <label for="grade">Класс *</label>
-                            <select id="grade" name="grade" required>
-                                <option value="">— выберите —</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
-                        <div class="reg-field">
-                            <label for="captainEmail">Email капитана *</label>
-                            <input type="email" id="captainEmail" name="captain_email" placeholder="captain@email.com"
-                                required />
-                        </div>
-                        <div class="reg-field">
-                            <label for="captainPhone">Телефон капитана *</label>
-                            <input type="tel" id="captainPhone" name="captain_phone" placeholder="+7 777 000 00 00"
-                                required />
-                        </div>
-                        <div class="reg-field reg-grid--full">
-                            <label for="school">Школа и город *</label>
-                            <input type="text" id="school" name="school" placeholder="НИШ г. Алматы" required />
-                        </div>
-                    </div>
-
-                    <hr class="reg-divider" />
-
-                    <!-- MEMBERS -->
-                    <p class="reg-section-label">Остальные участники</p>
-                    <div class="reg-grid">
-                        <div class="reg-field">
-                            <label for="member2">Участник 2 — ФИО *</label>
-                            <input type="text" id="member2" name="member2" placeholder="Петров Пётр Петрович"
-                                required />
-                        </div>
-                        <div class="reg-field">
-                            <label for="member3">Участник 3 — ФИО *</label>
-                            <input type="text" id="member3" name="member3" placeholder="Сидоров Сидор Сидорович"
-                                required />
-                        </div>
-                        <div class="reg-field reg-grid--full">
-                            <label for="member4">Участник 4 — ФИО *</label>
-                            <input type="text" id="member4" name="member4" placeholder="Алиев Алихан Алиевич"
-                                required />
-                        </div>
-                    </div>
-
-                    <!-- CONSENT -->
-                    <label class="reg-consent">
-                        <input type="checkbox" id="consent" required />
-                        <span>
-                            Я даю согласие на обработку персональных данных членов команды и подтверждаю, что все
-                            участники осведомлены об участии в олимпиаде NEScO 2025.
-                        </span>
-                    </label>
-
-                    <button type="submit" class="reg-submit" id="submitBtn">Зарегистрировать команду</button>
-
-                    <div class="reg-message success" id="msgSuccess">
-                        ✓ Команда успешно зарегистрирована! Ожидайте письма на указанный email с подтверждением.
-                    </div>
-                    <div class="reg-message error" id="msgError">
-                        Произошла ошибка. Пожалуйста, попробуйте снова.
-                    </div>
-
-                </form>
-            </div>
-        </main>
+    <!-- NAV -->
+    <div class="rn-nav-wrap">
+      <nav class="rn-nav">
+        <a href="/ru" class="rn-nav__logo">
+          <img src="/images/149/15248642/logo2-eaRu4CpcSUUG0yx_VFAUbA.png" alt="NEScO" />
+        </a>
+        <ul class="rn-nav__menu" id="navMenu">
+          <li><a href="/ru#ed-646418025">Описание</a></li>
+          <li><a href="/ru/321">Правила</a></li>
+          <li><a href="/ru/team">Команда</a></li>
+          <li><a href="/ru#ed-647175036">Партнёры</a></li>
+          <li><a href="/ru#ed-647173895">Контакты</a></li>
+          <li><a href="/ru/register" class="highlight">Регистрация</a></li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <div class="rn-nav__langs">
+            <a href="/kk/register">KZ</a>
+            <a href="/en/register">EN</a>
+            <a href="/ru/register" class="active">RU</a>
+          </div>
+          <button class="rn-nav__burger" id="burgerBtn" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
     </div>
 
-    <!-- ══ FOOTER ════════════════════════════════════════════════════ -->
-    <footer class="reg-footer">
-        <a href="/ru" class="reg-footer__logo">
-            <img src="/images/149/15248642/logo2-eaRu4CpcSUUG0yx_VFAUbA.png" alt="NEScO" />
+    <!-- HERO -->
+    <section class="rn-hero">
+      <div class="rn-hero__inner">
+        <p class="rn-hero__tag">NEScO 2025 — Регистрация</p>
+        <h1 class="rn-hero__title">Зарегистрируйте<br>свою команду</h1>
+        <p class="rn-hero__sub">
+          Олимпиада открыта для команд из 4 учащихся 8–12 классов
+          казахстанских школ. Капитан команды заполняет форму ниже —
+          название команды должно быть уникальным.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <div class="rn-body">
+      <div class="rn-body__inner">
+
+        <form id="regForm" novalidate>
+
+          <!-- Капитан -->
+          <div class="rn-section">
+            <div class="rn-section__num">1</div>
+            <h2 class="rn-section__title">Информация о команде и капитане</h2>
+          </div>
+
+          <div class="rn-grid">
+            <div class="rn-field rn-full">
+              <label for="teamName">Название команды *</label>
+              <input type="text" id="teamName" name="team_name" placeholder="Уникальное название" required />
+            </div>
+            <div class="rn-field">
+              <label for="captainName">ФИО капитана *</label>
+              <input type="text" id="captainName" name="captain_name" placeholder="Фамилия Имя Отчество" required />
+            </div>
+            <div class="rn-field">
+              <label for="grade">Класс капитана *</label>
+              <select id="grade" name="grade" required>
+                <option value="">— выберите —</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <div class="rn-field">
+              <label for="captainEmail">Email капитана *</label>
+              <input type="email" id="captainEmail" name="captain_email" placeholder="captain@mail.com" required />
+            </div>
+            <div class="rn-field">
+              <label for="captainPhone">Телефон капитана *</label>
+              <input type="tel" id="captainPhone" name="captain_phone" placeholder="+7 777 000 00 00" required />
+            </div>
+            <div class="rn-field rn-full">
+              <label for="school">Школа и город *</label>
+              <input type="text" id="school" name="school" placeholder="НИШ г. Алматы" required />
+            </div>
+          </div>
+
+          <hr class="rn-divider" />
+
+          <!-- Участники -->
+          <div class="rn-section">
+            <div class="rn-section__num">2</div>
+            <h2 class="rn-section__title">Остальные участники</h2>
+          </div>
+
+          <div class="rn-grid">
+            <div class="rn-field">
+              <label for="member2">Участник 2 — ФИО *</label>
+              <input type="text" id="member2" name="member2" placeholder="Фамилия Имя Отчество" required />
+            </div>
+            <div class="rn-field">
+              <label for="member3">Участник 3 — ФИО *</label>
+              <input type="text" id="member3" name="member3" placeholder="Фамилия Имя Отчество" required />
+            </div>
+            <div class="rn-field rn-full">
+              <label for="member4">Участник 4 — ФИО *</label>
+              <input type="text" id="member4" name="member4" placeholder="Фамилия Имя Отчество" required />
+            </div>
+          </div>
+
+          <hr class="rn-divider" />
+
+          <!-- Consent + Submit -->
+          <label class="rn-consent">
+            <input type="checkbox" id="consent" required />
+            <span>Я даю согласие на обработку персональных данных членов команды и подтверждаю, что все участники осведомлены об участии в NEScO 2025.</span>
+          </label>
+
+          <div class="rn-submit-row">
+            <button type="submit" class="rn-submit" id="submitBtn">Зарегистрировать команду</button>
+            <div class="rn-msg success" id="msgSuccess">
+              ✓ Команда успешно зарегистрирована! Подтверждение отправлено на указанный email.
+            </div>
+            <div class="rn-msg error" id="msgError">Произошла ошибка.</div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="rn-footer">
+      <div class="rn-footer__inner">
+        <a href="/ru">
+          <img src="/images/149/15248642/logo2-eaRu4CpcSUUG0yx_VFAUbA.png" alt="NEScO" style="width:90px;display:block;" />
         </a>
-        <div class="reg-footer__contact">
-            <a href="mailto:info@nesco.kz">info@nesco.kz</a><br />
-            +1 917-320-7202
+        <div class="rn-footer__contact">
+          <a href="mailto:info@nesco.kz">info@nesco.kz</a><br />
+          +1 917-320-7202
         </div>
-        <a href="https://www.instagram.com/nesco.kz" target="_blank" class="reg-footer__icon" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-            </svg>
-        </a>
+      </div>
     </footer>
 
     <script>
-        // ── Mobile nav ──────────────────────────────────────────────────
-        const burger = document.getElementById('burgerBtn');
-        const menu = document.getElementById('navMenu');
-        burger.addEventListener('click', () => menu.classList.toggle('open'));
-        document.addEventListener('click', (e) => {
-            if (!burger.contains(e.target) && !menu.contains(e.target)) {
-                menu.classList.remove('open');
-            }
-        });
-
-        // ── Form submission ─────────────────────────────────────────────
-        const form = document.getElementById('regForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const msgSuccess = document.getElementById('msgSuccess');
-        const msgError = document.getElementById('msgError');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Custom validation
-            const consent = document.getElementById('consent');
-            if (!consent.checked) {
-                showError('Пожалуйста, дайте согласие на обработку персональных данных.');
-                return;
-            }
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
-
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Отправка…';
-            hideMessages();
-
-            const payload = {
-                team_name: form.team_name.value.trim(),
-                captain_name: form.captain_name.value.trim(),
-                captain_email: form.captain_email.value.trim(),
-                captain_phone: form.captain_phone.value.trim(),
-                school: form.school.value.trim(),
-                grade: form.grade.value,
-                member2: form.member2.value.trim(),
-                member3: form.member3.value.trim(),
-                member4: form.member4.value.trim(),
-            };
-
-            try {
-                const res = await fetch('/register/api.php', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload),
-                });
-                const data = await res.json();
-
-                if (res.ok && data.success) {
-                    msgSuccess.classList.add('show');
-                    form.reset();
-                } else if (data.error === 'duplicate_team_name') {
-                    showError('Команда с таким названием уже зарегистрирована. Пожалуйста, выберите другое название.');
-                } else {
-                    showError(data.error || 'Неизвестная ошибка. Пожалуйста, попробуйте позже.');
-                }
-            } catch {
-                showError('Ошибка соединения. Проверьте интернет и попробуйте снова.');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Зарегистрировать команду';
-            }
-        });
-
-        function showError(msg) {
-            msgError.textContent = '✗ ' + msg;
-            msgError.classList.add('show');
+      // Mobile nav
+      const burger = document.getElementById('burgerBtn');
+      const menu   = document.getElementById('navMenu');
+      burger.addEventListener('click', () => menu.classList.toggle('open'));
+      document.addEventListener('click', e => {
+        if (!burger.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.remove('open');
         }
-        function hideMessages() {
-            msgSuccess.classList.remove('show');
-            msgError.classList.remove('show');
+      });
+
+      // Form
+      const form      = document.getElementById('regForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const msgOk     = document.getElementById('msgSuccess');
+      const msgErr    = document.getElementById('msgError');
+
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        if (!document.getElementById('consent').checked) {
+          show('error', 'Необходимо дать согласие на обработку персональных данных.');
+          return;
         }
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Отправка…';
+        hide();
+
+        try {
+          const res  = await fetch('/register/api.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              team_name:     form.team_name.value.trim(),
+              captain_name:  form.captain_name.value.trim(),
+              captain_email: form.captain_email.value.trim(),
+              captain_phone: form.captain_phone.value.trim(),
+              school:        form.school.value.trim(),
+              grade:         form.grade.value,
+              member2:       form.member2.value.trim(),
+              member3:       form.member3.value.trim(),
+              member4:       form.member4.value.trim(),
+            }),
+          });
+          const data = await res.json();
+
+          if (res.ok && data.success) {
+            msgOk.classList.add('show');
+            form.reset();
+          } else if (data.error === 'duplicate_team_name') {
+            show('error', 'Команда с таким названием уже зарегистрирована. Выберите другое название.');
+          } else {
+            show('error', data.error || 'Неизвестная ошибка. Попробуйте позже.');
+          }
+        } catch {
+          show('error', 'Ошибка соединения. Проверьте интернет и попробуйте снова.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Зарегистрировать команду';
+        }
+      });
+
+      function show(type, msg) {
+        hide();
+        if (type === 'error') { msgErr.textContent = '✗ ' + msg; msgErr.classList.add('show'); }
+        else { msgOk.classList.add('show'); }
+      }
+      function hide() {
+        msgOk.classList.remove('show');
+        msgErr.classList.remove('show');
+      }
     </script>
-</body>
-
+  </body>
 </html>

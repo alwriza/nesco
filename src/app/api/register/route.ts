@@ -1,41 +1,40 @@
 import { NextRequest, NextResponse } from "next/server";
+import { neon } from "@neondatabase/serverless";
 
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
+    
+    // Basic validation
+    if (!data.team_name) {
+      return NextResponse.json({ success: false, error: "Team name is required" }, { status: 400 });
+    }
 
-    console.log("New Registration Received:", data);
+    const sql = neon(process.env.DATABASE_URL!);
 
-    // --- TELEGRAM NOTIFICATION (Example) ---
-    // const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-    // const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
-    // if (BOT_TOKEN && CHAT_ID) {
-    //   const message = "<b>Новая регистрация NEScO 2026!</b>\n\n" +
-    //     `Команда: ${data.team_name}\n` +
-    //     `Участник 1: ${data.p1_name} (${data.p1_grade} класс)\n` +
-    //     `Школа: ${data.p1_school}\n` +
-    //     `Email: ${data.p1_email}\n` +
-    //     `Телефон: ${data.p1_phone}`;
-    //   
-    //   await fetch(\`https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage\`, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: "HTML" })
-    //   });
-    // }
-
-    // --- EMAIL NOTIFICATION (Example using Nodemailer) ---
-    // import nodemailer from "nodemailer";
-    // const transporter = nodemailer.createTransport({
-    //   host: process.env.SMTP_HOST,
-    //   port: 587,
-    //   auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
-    // });
-    // await transporter.sendMail({ ... });
+    // Insert into Neon
+    await sql`
+      INSERT INTO registrations (
+        team_name,
+        p1_name, p1_grade, p1_email, p1_phone, p1_school,
+        p2_name, p2_grade, p2_email, p2_phone, p2_school,
+        p3_name, p3_grade, p3_email, p3_phone, p3_school,
+        p4_name, p4_grade, p4_email, p4_phone, p4_school
+      ) VALUES (
+        ${data.team_name},
+        ${data.p1_name}, ${data.p1_grade}, ${data.p1_email}, ${data.p1_phone}, ${data.p1_school},
+        ${data.p2_name}, ${data.p2_grade}, ${data.p2_email}, ${data.p2_phone}, ${data.p2_school},
+        ${data.p3_name}, ${data.p3_grade}, ${data.p3_email}, ${data.p3_phone}, ${data.p3_school},
+        ${data.p4_name}, ${data.p4_grade}, ${data.p4_email}, ${data.p4_phone}, ${data.p4_school}
+      )
+    `;
 
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (err) {
+  } catch (err: any) {
     console.error("Registration error:", err);
-    return NextResponse.json({ success: false, error: "Internal Server Error" }, { status: 500 });
+    return NextResponse.json({ 
+      success: false, 
+      error: "Database error. Make sure the table exists and DATABASE_URL is correct." 
+    }, { status: 500 });
   }
 }

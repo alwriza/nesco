@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@import "../../public/webcard/static/app.min.1773313769.css";
+@import "../../public/css/custom.250409191453.css";
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Ensure accordion items marked as hidden stay hidden until JS opens them */
+.accordion-content.animation-initial {
+  display: none !important;
+  visibility: hidden;
+}
+/* When JS reveals them, it removes animation-initial */
+.accordion-content:not(.animation-initial) {
+  display: block;
+  visibility: visible;
+}
+
+/* Fix lazy-loaded images showing grey box - already loaded via SitejetsInit */
+img[data-src] {
+  min-height: 1px;
+}

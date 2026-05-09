@@ -364,6 +364,28 @@ export default function PageKk() {
     padding: 18px 0; font-size: 12px;
     color: rgba(255,255,255,0.2); text-align: center;
   }
+
+  /* Fix accordion triggers layout */
+  .accordion > .inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px 30px !important;
+    padding-bottom: 20px;
+  }
+  .accordion-trigger {
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+  .accordion-trigger h3, .accordion-trigger h4 {
+    margin: 0 !important;
+    font-size: 16px !important;
+    white-space: nowrap !important;
+  }
+  .accordion-content {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+  }
   /* Hide old footer */
   .preset-footer-thrud-v3-tech-startup, [class*="footer-thrud"] { display: none !important; }
   .ed-reference-container.footer { display: none !important; }
@@ -856,7 +878,7 @@ figure {
         <div className="inner">
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-647200830">
             <h4>
-              <a className="wv-link-elm active" href="#!next"><strong>I. Командаға қойылатын талаптар.</strong></a>
+              <a className="wv-link-elm active" href="#!next"><strong>I. Талаптар.</strong></a>
             </h4>
           </div>
           <div className="ed-element ed-container accordion-content" id="ed-647200833" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;show&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
@@ -918,9 +940,9 @@ figure {
             </div>
           </div>
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-647200857">
-            <h3>
-              <a className="wv-link-elm active" href="#!next">II. Бірінші кезең.</a>
-            </h3>
+            <h4>
+              <a className="wv-link-elm active" href="#!next"><strong>II. Бірінші кезең.</strong></a>
+            </h4>
           </div>
           <div className="ed-element ed-container accordion-content animation-initial" id="ed-647200860" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;hide&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
             <div className="inner">
@@ -957,9 +979,9 @@ figure {
             </div>
           </div>
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-647200884">
-            <h3>
-              <a className="wv-link-elm active" href="#!next">III. Екінші кезең.</a>
-            </h3>
+            <h4>
+              <a className="wv-link-elm active" href="#!next"><strong>III. Екінші кезең.</strong></a>
+            </h4>
           </div>
           <div className="ed-element ed-container accordion-content animation-initial" id="ed-647200887" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;hide&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
             <div className="inner">
@@ -996,9 +1018,9 @@ figure {
             </div>
           </div>
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-647200911">
-            <h3>
-              <a className="wv-link-elm active" href="#!next">IV. Кейс-стади.</a>
-            </h3>
+            <h4>
+              <a className="wv-link-elm active" href="#!next"><strong>IV. Кейс-стади.</strong></a>
+            </h4>
           </div>
           <div className="ed-element ed-container accordion-content animation-initial" id="ed-647200914" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;hide&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
             <div className="inner">
@@ -1173,7 +1195,7 @@ figure {
       <footer id="nd-contacts" className="nd-footer">
         <div className="nd-footer-inner">
           <div>
-            <div className="nd-footer-brand-copy" style={{ opacity: 0.6, fontSize: '14px', fontWeight: '500' }}>© 2026 NEScO — National Engineering & Science Olympiad</div>
+            <div className="nd-footer-brand-copy" style={{ opacity: 0.4, fontSize: '12px' }}>© 2026 NEScO — National Engineering & Science Olympiad</div>
           </div>
           <div>
             <div className="nd-footer-col-h">Навигация</div>

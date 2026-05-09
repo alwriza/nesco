@@ -364,6 +364,28 @@ export default function PageEn() {
     padding: 18px 0; font-size: 12px;
     color: rgba(255,255,255,0.2); text-align: center;
   }
+  
+  /* Fix accordion triggers layout */
+  .accordion > .inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px 30px !important;
+    padding-bottom: 20px;
+  }
+  .accordion-trigger {
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+  .accordion-trigger h3, .accordion-trigger h4 {
+    margin: 0 !important;
+    font-size: 16px !important;
+    white-space: nowrap !important;
+  }
+  .accordion-content {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+  }
   /* Hide old footer */
   .preset-footer-thrud-v3-tech-startup, [class*="footer-thrud"] { display: none !important; }
   .ed-reference-container.footer { display: none !important; }
@@ -893,7 +915,7 @@ figure {
                       <div className="ed-element ed-text custom-theme" id="ed-612774608">
                         <p>
                           • &nbsp;
-                          <span style={{ color: 'oklab(0.952331 0.000418991 -0.00125992)', fontFamily: '"gg sans", "Noto Sans",                               "Helvetica Neue", Helvetica, Arial,                               sans-serif', fontSize: 16, fontStyle: 'normal', fontVariantLigatures: 'normal', fontVariantCaps: 'normal', fontWeight: 400, letterSpacing: 'normal', orphans: 2, textAlign: 'left', textIndent: 0, textTransform: 'none', widows: 2, wordSpacing: 0, WebkitTextStrokeWidth: 0, whiteSpace: 'break-spaces', backgroundColor: 'oklab(                               0.678888 0.00325716 -0.011175 / 0.0784314                             )', textDecorationThickness: 'initial', textDecorationStyle: 'initial', textDecorationColor: 'initial', display: 'inline !important', float: 'none' }} id="isPasted">• &nbsp; &nbsp;There should be 4 students in one team.
+                          <span style={{ color: 'oklab(0.952331 0.000418991 -0.00125992)', fontFamily: '"gg sans", "Noto Sans",                               "Helvetica Neue", Helvetica, Arial,                               sans-serif', fontSize: 16, fontStyle: 'normal', fontVariantLigatures: 'normal', fontVariantCaps: 'normal', fontWeight: 400, letterSpacing: 'normal', orphans: 2, textAlign: 'left', textIndent: 0, textTransform: 'none', widows: 2, wordSpacing: 0, WebkitTextStrokeWidth: 0, whiteSpace: 'break-spaces', backgroundColor: 'oklab(                               0.678888 0.00325716 -0.011175 / 0.0784314                             )', textDecorationThickness: 'initial', textDecorationStyle: 'initial', textDecorationColor: 'initial', display: 'inline !important', float: 'none' }} id="isPasted">There should be 4 students in one team.
                             These can be students from grades 8 to 12.</span>
                         </p>
                         <p><br /></p>
@@ -936,9 +958,9 @@ figure {
             </div>
           </div>
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-612774617">
-            <h3>
-              <a className="wv-link-elm active" href="#!next">II. First Stage.</a>
-            </h3>
+            <h4>
+              <a className="wv-link-elm active" href="#!next"><strong>II. First Stage.</strong></a>
+            </h4>
           </div>
           <div className="ed-element ed-container accordion-content animation-initial" id="ed-612774620" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;hide&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
             <div className="inner">
@@ -975,9 +997,9 @@ figure {
             </div>
           </div>
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-612774644">
-            <h3>
-              <a className="wv-link-elm active" href="#!next">III. Second Stage.</a>
-            </h3>
+            <h4>
+              <a className="wv-link-elm active" href="#!next"><strong>III. Second Stage.</strong></a>
+            </h4>
           </div>
           <div className="ed-element ed-container accordion-content animation-initial" id="ed-612774647" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;hide&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
             <div className="inner">
@@ -1014,9 +1036,9 @@ figure {
             </div>
           </div>
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-646054799">
-            <h3>
-              <a className="wv-link-elm active" href="#!next">IV. Case Study.</a>
-            </h3>
+            <h4>
+              <a className="wv-link-elm active" href="#!next"><strong>IV. Case Study.</strong></a>
+            </h4>
           </div>
           <div className="ed-element ed-container accordion-content animation-initial" id="ed-646054802" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;hide&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
             <div className="inner">
@@ -1051,9 +1073,9 @@ figure {
             </div>
           </div>
           <div className="ed-element ed-headline custom-theme accordion-trigger" id="ed-612774596">
-            <h3>
-              <a className="wv-link-elm active" href="#!next">V. Key Dates.</a>
-            </h3>
+            <h4>
+              <a className="wv-link-elm active" href="#!next"><strong>V. Key Dates.</strong></a>
+            </h4>
           </div>
           <div className="ed-element ed-container accordion-content animation-initial" id="ed-612774599" data-animation="{&quot;type&quot;:&quot;slide&quot;,&quot;initial&quot;:&quot;hide&quot;,&quot;keepHeight&quot;:false,&quot;duration&quot;:&quot;0.5s&quot;,&quot;delay&quot;:&quot;0s&quot;,&quot;overlay&quot;:{&quot;width&quot;:&quot;auto&quot;},&quot;trigger&quot;:&quot;&quot;,&quot;group&quot;:{&quot;name&quot;:&quot;accordion_fd24_new&quot;,&quot;behavior&quot;:{&quot;show&quot;:&quot;hide&quot;,&quot;hide&quot;:&quot;hide&quot;}}}">
             <div className="inner">
@@ -1191,7 +1213,7 @@ figure {
       <footer id="nd-contacts" className="nd-footer">
         <div className="nd-footer-inner">
           <div>
-            <div className="nd-footer-brand-copy" style={{ opacity: 0.6, fontSize: '14px', fontWeight: '500' }}>© 2026 NEScO — National Engineering & Science Olympiad</div>
+            <div className="nd-footer-brand-copy" style={{ opacity: 0.4, fontSize: '12px' }}>© 2026 NEScO — National Engineering & Science Olympiad</div>
           </div>
           <div>
             <div className="nd-footer-col-h">Navigation</div>

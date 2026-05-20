@@ -11,7 +11,7 @@ export default function PageRuRegister() {
 
     const handleSubmit = async (e: Event) => {
       e.preventDefault();
-      
+
       const consent = document.getElementById('consent') as HTMLInputElement;
       if (!consent?.checked) return;
 
@@ -49,9 +49,10 @@ export default function PageRuRegister() {
     return () => form.removeEventListener('submit', handleSubmit);
   }, []);
 
-    return (
-      <div>
-        <style dangerouslySetInnerHTML={{ __html: `*, *::before, *::after { box-sizing: border-box; }
+  return (
+    <div>
+      <style dangerouslySetInnerHTML={{
+        __html: `*, *::before, *::after { box-sizing: border-box; }
       figure { margin: 0; }
       body { margin: 0; background: #fff; }
 
@@ -375,108 +376,270 @@ export default function PageRuRegister() {
         transition: color .2s;
       }
       .rn-footer__contact a:hover { color: #fff; }` }} />
-        {/* NAV */}
-        <div className="rn-nav-wrap">
-          <nav className="rn-nav">
-            <a href="/ru" className="rn-nav__logo">
-              <img src="/images/149/15248642/logo2-eaRu4CpcSUUG0yx_VFAUbA.png" alt="NEScO" />
-            </a>
-            <ul className="rn-nav__menu" id="navMenu">
-              <li><a href="/ru/team">Команда</a></li>
-              <li><a href="/ru#ed-647175036">Партнёры</a></li>
-              <li><a href="/ru#ed-647173895">Контакты</a></li>
-              <li><a href="/ru/register" className="highlight">Регистрация</a></li>
-            </ul>
-            <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
-              <div className="rn-nav__langs">
-                <a href="/kk/register">KZ</a>
-                <a href="/en/register">EN</a>
-                <a href="/ru/register" className="active">RU</a>
+      {/* NAV */}
+      <div className="rn-nav-wrap">
+        <nav className="rn-nav">
+          <a href="/ru" className="rn-nav__logo">
+            <img src="/images/149/15248642/logo2-eaRu4CpcSUUG0yx_VFAUbA.png" alt="NEScO" />
+          </a>
+          <ul className="rn-nav__menu" id="navMenu">
+            <li><a href="/ru/team">Команда</a></li>
+            <li><a href="/ru#ed-647175036">Партнёры</a></li>
+            <li><a href="/ru#ed-647173895">Контакты</a></li>
+            <li><a href="/ru/register" className="highlight">Регистрация</a></li>
+          </ul>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div className="rn-nav__langs">
+              <a href="/kk/register">KZ</a>
+              <a href="/en/register">EN</a>
+              <a href="/ru/register" className="active">RU</a>
+            </div>
+            <button className="rn-nav__burger" id="burgerBtn" aria-label="Меню">
+              <span /><span /><span />
+            </button>
+          </div>
+        </nav>
+      </div>
+      {/* HERO */}
+      <section className="rn-hero">
+        <div className="rn-hero__inner">
+          <p className="rn-hero__tag">NEScO 2026 — Регистрация</p>
+          <h1 className="rn-hero__title">Зарегистрируйте свою команду</h1>
+          <p className="rn-hero__sub">
+            Олимпиада открыта для команд из 4-5 учащихся 9–12 классов.
+            Заполните форму ниже для регистрации всей команды — название команды должно быть уникальным.
+          </p>
+        </div>
+      </section>
+      {/* FORM */}
+      <div className="rn-body">
+        <div className="rn-body__inner">
+          <form id="regForm">
+            <div className="rn-section">
+              <div className="rn-section__num">1</div>
+              <h2 className="rn-section__title">Информация о команде</h2>
+            </div>
+            <div className="rn-grid">
+              <div className="rn-field rn-full">
+                <label htmlFor="teamName">Название команды *</label>
+                <input type="text" id="teamName" name="team_name" placeholder="Введите уникальное название" required />
               </div>
-              <button className="rn-nav__burger" id="burgerBtn" aria-label="Меню">
-                <span /><span /><span />
+            </div>
+
+            {/* Participant 1 */}
+            <div className="rn-section">
+              <div className="rn-section__num">2</div>
+              <h2 className="rn-section__title">Участник 1 (Капитан)</h2>
+            </div>
+            <div className="rn-grid">
+              <div className="rn-field">
+                <label htmlFor="p1Name">ФИО *</label>
+                <input type="text" id="p1Name" name="p1_name" placeholder="Фамилия Имя Отчество" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p1Grade">Класс *</label>
+                <select id="p1Grade" name="p1_grade" required>
+                  <option value="">— выберите —</option>
+                  <option value={9}>9</option>
+                  <option value={10}>10</option>
+                  <option value={11}>11</option>
+                  <option value={12}>12</option>
+                </select>
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p1Email">Email *</label>
+                <input type="email" id="p1Email" name="p1_email" placeholder="example@mail.com" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p1Phone">Телефон *</label>
+                <input type="tel" id="p1Phone" name="p1_phone" placeholder="+0 000 000 00 00" required />
+              </div>
+              <div className="rn-field rn-full">
+                <label htmlFor="p1School">Школа *</label>
+                <input type="text" id="p1School" name="p1_school" placeholder="Название школы и город" required />
+              </div>
+            </div>
+
+            <hr className="rn-divider" />
+
+            {/* Participant 2 */}
+            <div className="rn-section">
+              <div className="rn-section__num">3</div>
+              <h2 className="rn-section__title">Участник 2</h2>
+            </div>
+            <div className="rn-grid">
+              <div className="rn-field">
+                <label htmlFor="p2Name">ФИО *</label>
+                <input type="text" id="p2Name" name="p2_name" placeholder="Фамилия Имя Отчество" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p2Grade">Класс *</label>
+                <select id="p2Grade" name="p2_grade" required>
+                  <option value="">— выберите —</option>
+                  <option value={9}>9</option>
+                  <option value={10}>10</option>
+                  <option value={11}>11</option>
+                  <option value={12}>12</option>
+                </select>
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p2Email">Email *</label>
+                <input type="email" id="p2Email" name="p2_email" placeholder="example@mail.com" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p2Phone">Телефон *</label>
+                <input type="tel" id="p2Phone" name="p2_phone" placeholder="+0 000 000 00 00" required />
+              </div>
+              <div className="rn-field rn-full">
+                <label htmlFor="p2School">Школа *</label>
+                <input type="text" id="p2School" name="p2_school" placeholder="Название школы и город" required />
+              </div>
+            </div>
+
+            <hr className="rn-divider" />
+
+            {/* Participant 3 */}
+            <div className="rn-section">
+              <div className="rn-section__num">4</div>
+              <h2 className="rn-section__title">Участник 3</h2>
+            </div>
+            <div className="rn-grid">
+              <div className="rn-field">
+                <label htmlFor="p3Name">ФИО *</label>
+                <input type="text" id="p3Name" name="p3_name" placeholder="Фамилия Имя Отчество" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p3Grade">Класс *</label>
+                <select id="p3Grade" name="p3_grade" required>
+                  <option value="">— выберите —</option>
+                  <option value={9}>9</option>
+                  <option value={10}>10</option>
+                  <option value={11}>11</option>
+                  <option value={12}>12</option>
+                </select>
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p3Email">Email *</label>
+                <input type="email" id="p3Email" name="p3_email" placeholder="example@mail.com" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p3Phone">Телефон *</label>
+                <input type="tel" id="p3Phone" name="p3_phone" placeholder="+0 000 000 00 00" required />
+              </div>
+              <div className="rn-field rn-full">
+                <label htmlFor="p3School">Школа *</label>
+                <input type="text" id="p3School" name="p3_school" placeholder="Название школы и город" required />
+              </div>
+            </div>
+
+            <hr className="rn-divider" />
+
+            {/* Participant 4 */}
+            <div className="rn-section">
+              <div className="rn-section__num">5</div>
+              <h2 className="rn-section__title">Участник 4</h2>
+            </div>
+            <div className="rn-grid">
+              <div className="rn-field">
+                <label htmlFor="p4Name">ФИО *</label>
+                <input type="text" id="p4Name" name="p4_name" placeholder="Фамилия Имя Отчество" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p4Grade">Класс *</label>
+                <select id="p4Grade" name="p4_grade" required>
+                  <option value="">— выберите —</option>
+                  <option value={9}>9</option>
+                  <option value={10}>10</option>
+                  <option value={11}>11</option>
+                  <option value={12}>12</option>
+                </select>
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p4Email">Email *</label>
+                <input type="email" id="p4Email" name="p4_email" placeholder="example@mail.com" required />
+              </div>
+              <div className="rn-field">
+                <label htmlFor="p4Phone">Телефон *</label>
+                <input type="tel" id="p4Phone" name="p4_phone" placeholder="+0 000 000 00 00" required />
+              </div>
+              <div className="rn-field rn-full">
+                <label htmlFor="p4School">Школа *</label>
+                <input type="text" id="p4School" name="p4_school" placeholder="Название школы и город" required />
+              </div>
+            </div>
+
+            <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+              <button 
+                type="button" 
+                id="addP5Btn"
+                style={{ 
+                  background: 'none', 
+                  border: '1px dashed #7a3afe', 
+                  color: '#7a3afe', 
+                  padding: '0.5rem 1rem', 
+                  borderRadius: '6px', 
+                  cursor: 'pointer',
+                  fontFamily: 'Roboto, sans-serif',
+                  fontSize: '14px',
+                  fontWeight: 500
+                }}
+                onClick={(e) => {
+                  const p5Section = document.getElementById('p5-section');
+                  const addBtn = document.getElementById('addP5Btn');
+                  if (p5Section && addBtn) {
+                    p5Section.style.display = 'block';
+                    addBtn.style.display = 'none';
+                    // Make fields required when shown
+                    ['p5Name', 'p5Grade', 'p5Email', 'p5Phone', 'p5School'].forEach(id => {
+                      const el = document.getElementById(id) as HTMLInputElement | HTMLSelectElement;
+                      if (el) el.required = true;
+                    });
+                  }
+                }}
+              >
+                + Добавить 5-го участника
               </button>
             </div>
-          </nav>
-        </div>
-        {/* HERO */}
-        <section className="rn-hero">
-          <div className="rn-hero__inner">
-            <p className="rn-hero__tag">NEScO 2026 — Регистрация</p>
-            <h1 className="rn-hero__title">Зарегистрируйте свою команду</h1>
-            <p className="rn-hero__sub">
-              Олимпиада открыта для команд из 4 учащихся 8–12 классов.
-              Заполните форму ниже для регистрации всей команды — название команды должно быть уникальным.
-            </p>
-          </div>
-        </section>
-        {/* FORM */}
-        <div className="rn-body">
-          <div className="rn-body__inner">
-            <form id="regForm" noValidate>
-              <div className="rn-section">
-                <div className="rn-section__num">1</div>
-                <h2 className="rn-section__title">Информация о команде</h2>
-              </div>
-              <div className="rn-grid">
-                <div className="rn-field rn-full">
-                  <label htmlFor="teamName">Название команды *</label>
-                  <input type="text" id="teamName" name="team_name" placeholder="Введите уникальное название" required />
-                </div>
-              </div>
-              
-              {/* Participant 1 */}
-              <div className="rn-section">
-                <div className="rn-section__num">2</div>
-                <h2 className="rn-section__title">Участник 1 (Капитан)</h2>
-              </div>
-              <div className="rn-grid">
-                <div className="rn-field">
-                  <label htmlFor="p1Name">ФИО *</label>
-                  <input type="text" id="p1Name" name="p1_name" placeholder="Фамилия Имя Отчество" required />
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p1Grade">Класс *</label>
-                  <select id="p1Grade" name="p1_grade" required>
-                    <option value="">— выберите —</option>
-                    <option value={8}>8</option>
-                    <option value={9}>9</option>
-                    <option value={10}>10</option>
-                    <option value={11}>11</option>
-                    <option value={12}>12</option>
-                  </select>
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p1Email">Email *</label>
-                  <input type="email" id="p1Email" name="p1_email" placeholder="example@mail.com" required />
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p1Phone">Телефон *</label>
-                  <input type="tel" id="p1Phone" name="p1_phone" placeholder="+0 000 000 00 00" required />
-                </div>
-                <div className="rn-field rn-full">
-                  <label htmlFor="p1School">Школа *</label>
-                  <input type="text" id="p1School" name="p1_school" placeholder="Название школы и город" required />
-                </div>
-              </div>
 
+            <div id="p5-section" style={{ display: 'none' }}>
               <hr className="rn-divider" />
-
-              {/* Participant 2 */}
               <div className="rn-section">
-                <div className="rn-section__num">3</div>
-                <h2 className="rn-section__title">Участник 2</h2>
+                <div className="rn-section__num">6</div>
+                <h2 className="rn-section__title">Участник 5 (Необязательно)</h2>
+                <button 
+                  type="button" 
+                  style={{
+                    background: 'none', border: 'none', color: '#e53e3e', cursor: 'pointer', fontSize: '14px', textDecoration: 'underline'
+                  }}
+                  onClick={(e) => {
+                    const p5Section = document.getElementById('p5-section');
+                    const addBtn = document.getElementById('addP5Btn');
+                    if (p5Section && addBtn) {
+                      p5Section.style.display = 'none';
+                      addBtn.style.display = 'inline-block';
+                      // Remove required so it doesn't block submit when hidden
+                      ['p5Name', 'p5Grade', 'p5Email', 'p5Phone', 'p5School'].forEach(id => {
+                        const el = document.getElementById(id) as HTMLInputElement | HTMLSelectElement;
+                        if (el) {
+                          el.required = false;
+                          el.value = ''; // clear value
+                        }
+                      });
+                    }
+                  }}
+                >
+                  Удалить
+                </button>
               </div>
               <div className="rn-grid">
                 <div className="rn-field">
-                  <label htmlFor="p2Name">ФИО *</label>
-                  <input type="text" id="p2Name" name="p2_name" required />
+                  <label htmlFor="p5Name">ФИО *</label>
+                  <input type="text" id="p5Name" name="p5_name" placeholder="Фамилия Имя Отчество" />
                 </div>
                 <div className="rn-field">
-                  <label htmlFor="p2Grade">Класс *</label>
-                  <select id="p2Grade" name="p2_grade" required>
+                  <label htmlFor="p5Grade">Класс *</label>
+                  <select id="p5Grade" name="p5_grade">
                     <option value="">— выберите —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -484,116 +647,54 @@ export default function PageRuRegister() {
                   </select>
                 </div>
                 <div className="rn-field">
-                  <label htmlFor="p2Email">Email *</label>
-                  <input type="email" id="p2Email" name="p2_email" required />
+                  <label htmlFor="p5Email">Email *</label>
+                  <input type="email" id="p5Email" name="p5_email" placeholder="example@mail.com" />
                 </div>
                 <div className="rn-field">
-                  <label htmlFor="p2Phone">Телефон *</label>
-                  <input type="tel" id="p2Phone" name="p2_phone" required />
+                  <label htmlFor="p5Phone">Телефон *</label>
+                  <input type="tel" id="p5Phone" name="p5_phone" placeholder="+0 000 000 00 00" />
                 </div>
                 <div className="rn-field rn-full">
-                  <label htmlFor="p2School">Школа *</label>
-                  <input type="text" id="p2School" name="p2_school" required />
+                  <label htmlFor="p5School">Школа *</label>
+                  <input type="text" id="p5School" name="p5_school" placeholder="Название школы и город" />
                 </div>
               </div>
-
-              <hr className="rn-divider" />
-
-              {/* Participant 3 */}
-              <div className="rn-section">
-                <div className="rn-section__num">4</div>
-                <h2 className="rn-section__title">Участник 3</h2>
-              </div>
-              <div className="rn-grid">
-                <div className="rn-field">
-                  <label htmlFor="p3Name">ФИО *</label>
-                  <input type="text" id="p3Name" name="p3_name" required />
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p3Grade">Класс *</label>
-                  <select id="p3Grade" name="p3_grade" required>
-                    <option value="">— выберите —</option>
-                    <option value={8}>8</option>
-                    <option value={9}>9</option>
-                    <option value={10}>10</option>
-                    <option value={11}>11</option>
-                    <option value={12}>12</option>
-                  </select>
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p3Email">Email *</label>
-                  <input type="email" id="p3Email" name="p3_email" required />
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p3Phone">Телефон *</label>
-                  <input type="tel" id="p3Phone" name="p3_phone" required />
-                </div>
-                <div className="rn-field rn-full">
-                  <label htmlFor="p3School">Школа *</label>
-                  <input type="text" id="p3School" name="p3_school" required />
-                </div>
-              </div>
-
-              <hr className="rn-divider" />
-
-              {/* Participant 4 */}
-              <div className="rn-section">
-                <div className="rn-section__num">5</div>
-                <h2 className="rn-section__title">Участник 4</h2>
-              </div>
-              <div className="rn-grid">
-                <div className="rn-field">
-                  <label htmlFor="p4Name">ФИО *</label>
-                  <input type="text" id="p4Name" name="p4_name" required />
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p4Grade">Класс *</label>
-                  <select id="p4Grade" name="p4_grade" required>
-                    <option value="">— выберите —</option>
-                    <option value={8}>8</option>
-                    <option value={9}>9</option>
-                    <option value={10}>10</option>
-                    <option value={11}>11</option>
-                    <option value={12}>12</option>
-                  </select>
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p4Email">Email *</label>
-                  <input type="email" id="p4Email" name="p4_email" required />
-                </div>
-                <div className="rn-field">
-                  <label htmlFor="p4Phone">Телефон *</label>
-                  <input type="tel" id="p4Phone" name="p4_phone" required />
-                </div>
-                <div className="rn-field rn-full">
-                  <label htmlFor="p4School">Школа *</label>
-                  <input type="text" id="p4School" name="p4_school" required />
-                </div>
-              </div>
-
-              <label className="rn-consent">
-                <input type="checkbox" id="consent" required />
-                <span>Я даю согласие на обработку персональных данных участников и подтверждаю их участие в NEScO 2026.</span>
-              </label>
-              <div className="rn-submit-row">
-                <button type="submit" className="rn-submit" id="submitBtn">Зарегистрировать команду</button>
-                <div className="rn-msg success" id="msgSuccess">
-                  ✓ Команда успешно зарегистрирована!
-                </div>
-                <div className="rn-msg error" id="msgError">Ошибка при регистрации.</div>
-              </div>
-            </form>
-          </div>
-        </div>
-        {/* FOOTER */}
-        <footer className="rn-footer">
-          <div className="rn-footer__inner">
-            <div className="rn-footer-brand-copy" style={{ opacity: 0.6, fontSize: '14px', fontWeight: '500', color: '#fff' }}>© 2026 NEScO — National Engineering & Science Olympiad</div>
-            <div className="rn-footer__contact">
-              <a href="mailto:info@nesco.kz">info@nesco.kz</a>
             </div>
-          </div>
-        </footer>
+
+            <div className="rn-submit-row">
+              <button type="submit" className="rn-submit" id="submitBtn">Зарегистрировать команду</button>
+              <div className="rn-msg success" id="msgSuccess">
+                ✓ Команда успешно зарегистрирована!
+              </div>
+              <div className="rn-msg error" id="msgError">Ошибка при регистрации.</div>
+            </div>
+
+            <label className="rn-consent" style={{ marginTop: '1.5rem' }}>
+              <input type="checkbox" id="consent" required />
+              <span>
+                Даю согласие на сбор, обработку и хранение Персональных Данных в соответствии с{' '}
+                <a href="https://bc-pf.org/docs/personaldata/list1-matomo.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#7a3afe' }}>
+                  Перечнем №03-08/01
+                </a>
+                . С{' '}
+                <a href="https://bc-pf.org/personaldata" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#7a3afe' }}>
+                  политикой работы с ПД Фонда и перечнем
+                </a>{' '}
+                можно ознакомиться на сайте Фонда.
+              </span>
+            </label>
+          </form>
+        </div>
       </div>
-    );
-  }
+      {/* FOOTER */}
+      <footer className="rn-footer">
+        <div className="rn-footer__inner">
+          <div className="rn-footer-brand-copy" style={{ opacity: 0.6, fontSize: '14px', fontWeight: '500', color: '#fff' }}>© 2026 NEScO — National Engineering & Science Olympiad</div>
+          <div className="rn-footer__contact">
+            <a href="mailto:info@nesco.kz">info@nesco.kz</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

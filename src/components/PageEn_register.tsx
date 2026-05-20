@@ -405,7 +405,7 @@ export default function PageEnRegister() {
             <p className="rn-hero__tag">NEScO 2026 — Registration</p>
             <h1 className="rn-hero__title">Register your team</h1>
             <p className="rn-hero__sub">
-              The Olympiad is open to teams of 4 students in grades 8–12.
+              The Olympiad is open to teams of 4-5 students in grades 9–12.
               Please fill out the form below to register your full team — the team name must be unique.
             </p>
           </div>
@@ -413,7 +413,7 @@ export default function PageEnRegister() {
         {/* FORM */}
         <div className="rn-body">
           <div className="rn-body__inner">
-            <form id="regForm" noValidate>
+            <form id="regForm">
               <div className="rn-section">
                 <div className="rn-section__num">1</div>
                 <h2 className="rn-section__title">Team Information</h2>
@@ -439,7 +439,6 @@ export default function PageEnRegister() {
                   <label htmlFor="p1Grade">Grade *</label>
                   <select id="p1Grade" name="p1_grade" required>
                     <option value="">— select —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -470,13 +469,12 @@ export default function PageEnRegister() {
               <div className="rn-grid">
                 <div className="rn-field">
                   <label htmlFor="p2Name">Full Name *</label>
-                  <input type="text" id="p2Name" name="p2_name" required />
+                  <input type="text" id="p2Name" name="p2_name" placeholder="First Last Name" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p2Grade">Grade *</label>
                   <select id="p2Grade" name="p2_grade" required>
                     <option value="">— select —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -485,15 +483,15 @@ export default function PageEnRegister() {
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p2Email">Email *</label>
-                  <input type="email" id="p2Email" name="p2_email" required />
+                  <input type="email" id="p2Email" name="p2_email" placeholder="example@mail.com" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p2Phone">Phone *</label>
-                  <input type="tel" id="p2Phone" name="p2_phone" required />
+                  <input type="tel" id="p2Phone" name="p2_phone" placeholder="+0 000 000 00 00" required />
                 </div>
                 <div className="rn-field rn-full">
                   <label htmlFor="p2School">School *</label>
-                  <input type="text" id="p2School" name="p2_school" required />
+                  <input type="text" id="p2School" name="p2_school" placeholder="School name and city" required />
                 </div>
               </div>
 
@@ -507,13 +505,12 @@ export default function PageEnRegister() {
               <div className="rn-grid">
                 <div className="rn-field">
                   <label htmlFor="p3Name">Full Name *</label>
-                  <input type="text" id="p3Name" name="p3_name" required />
+                  <input type="text" id="p3Name" name="p3_name" placeholder="First Last Name" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p3Grade">Grade *</label>
                   <select id="p3Grade" name="p3_grade" required>
                     <option value="">— select —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -522,15 +519,15 @@ export default function PageEnRegister() {
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p3Email">Email *</label>
-                  <input type="email" id="p3Email" name="p3_email" required />
+                  <input type="email" id="p3Email" name="p3_email" placeholder="example@mail.com" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p3Phone">Phone *</label>
-                  <input type="tel" id="p3Phone" name="p3_phone" required />
+                  <input type="tel" id="p3Phone" name="p3_phone" placeholder="+0 000 000 00 00" required />
                 </div>
                 <div className="rn-field rn-full">
                   <label htmlFor="p3School">School *</label>
-                  <input type="text" id="p3School" name="p3_school" required />
+                  <input type="text" id="p3School" name="p3_school" placeholder="School name and city" required />
                 </div>
               </div>
 
@@ -544,13 +541,12 @@ export default function PageEnRegister() {
               <div className="rn-grid">
                 <div className="rn-field">
                   <label htmlFor="p4Name">Full Name *</label>
-                  <input type="text" id="p4Name" name="p4_name" required />
+                  <input type="text" id="p4Name" name="p4_name" placeholder="First Last Name" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p4Grade">Grade *</label>
                   <select id="p4Grade" name="p4_grade" required>
                     <option value="">— select —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -559,22 +555,109 @@ export default function PageEnRegister() {
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p4Email">Email *</label>
-                  <input type="email" id="p4Email" name="p4_email" required />
+                  <input type="email" id="p4Email" name="p4_email" placeholder="example@mail.com" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p4Phone">Phone *</label>
-                  <input type="tel" id="p4Phone" name="p4_phone" required />
+                  <input type="tel" id="p4Phone" name="p4_phone" placeholder="+0 000 000 00 00" required />
                 </div>
                 <div className="rn-field rn-full">
                   <label htmlFor="p4School">School *</label>
-                  <input type="text" id="p4School" name="p4_school" required />
+                  <input type="text" id="p4School" name="p4_school" placeholder="School name and city" required />
                 </div>
               </div>
 
-              <label className="rn-consent">
-                <input type="checkbox" id="consent" required />
-                <span>I consent to the processing of personal data and confirm team participation in NEScO 2026.</span>
-              </label>
+              <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+                <button 
+                  type="button" 
+                  id="addP5Btn"
+                  style={{ 
+                    background: 'none', 
+                    border: '1px dashed #7a3afe', 
+                    color: '#7a3afe', 
+                    padding: '0.5rem 1rem', 
+                    borderRadius: '6px', 
+                    cursor: 'pointer',
+                    fontFamily: 'Roboto, sans-serif',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                  onClick={(e) => {
+                    const p5Section = document.getElementById('p5-section');
+                    const addBtn = document.getElementById('addP5Btn');
+                    if (p5Section && addBtn) {
+                      p5Section.style.display = 'block';
+                      addBtn.style.display = 'none';
+                      ['p5Name', 'p5Grade', 'p5Email', 'p5Phone', 'p5School'].forEach(id => {
+                        const el = document.getElementById(id) as HTMLInputElement | HTMLSelectElement;
+                        if (el) el.required = true;
+                      });
+                    }
+                  }}
+                >
+                  + Add 5th participant
+                </button>
+              </div>
+
+              <div id="p5-section" style={{ display: 'none' }}>
+                <hr className="rn-divider" />
+                <div className="rn-section">
+                  <div className="rn-section__num">6</div>
+                  <h2 className="rn-section__title">Participant 5 (Optional)</h2>
+                  <button 
+                    type="button" 
+                    style={{
+                      background: 'none', border: 'none', color: '#e53e3e', cursor: 'pointer', fontSize: '14px', textDecoration: 'underline'
+                    }}
+                    onClick={(e) => {
+                      const p5Section = document.getElementById('p5-section');
+                      const addBtn = document.getElementById('addP5Btn');
+                      if (p5Section && addBtn) {
+                        p5Section.style.display = 'none';
+                        addBtn.style.display = 'inline-block';
+                        ['p5Name', 'p5Grade', 'p5Email', 'p5Phone', 'p5School'].forEach(id => {
+                          const el = document.getElementById(id) as HTMLInputElement | HTMLSelectElement;
+                          if (el) {
+                            el.required = false;
+                            el.value = '';
+                          }
+                        });
+                      }
+                    }}
+                  >
+                    Remove
+                  </button>
+                </div>
+                <div className="rn-grid">
+                  <div className="rn-field">
+                    <label htmlFor="p5Name">Full Name *</label>
+                    <input type="text" id="p5Name" name="p5_name" placeholder="First Last Name" />
+                  </div>
+                  <div className="rn-field">
+                    <label htmlFor="p5Grade">Grade *</label>
+                    <select id="p5Grade" name="p5_grade">
+                      <option value="">— select —</option>
+                      <option value={9}>9</option>
+                      <option value={10}>10</option>
+                      <option value={11}>11</option>
+                      <option value={12}>12</option>
+                    </select>
+                  </div>
+                  <div className="rn-field">
+                    <label htmlFor="p5Email">Email *</label>
+                    <input type="email" id="p5Email" name="p5_email" placeholder="example@mail.com" />
+                  </div>
+                  <div className="rn-field">
+                    <label htmlFor="p5Phone">Phone *</label>
+                    <input type="tel" id="p5Phone" name="p5_phone" placeholder="+0 000 000 00 00" />
+                  </div>
+                  <div className="rn-field rn-full">
+                    <label htmlFor="p5School">School *</label>
+                    <input type="text" id="p5School" name="p5_school" placeholder="School name and city" />
+                  </div>
+                </div>
+              </div>
+
               <div className="rn-submit-row">
                 <button type="submit" className="rn-submit" id="submitBtn">Register Team</button>
                 <div className="rn-msg success" id="msgSuccess">
@@ -582,6 +665,21 @@ export default function PageEnRegister() {
                 </div>
                 <div className="rn-msg error" id="msgError">An error occurred.</div>
               </div>
+
+              <label className="rn-consent" style={{ marginTop: '1.5rem' }}>
+                <input type="checkbox" id="consent" required />
+                <span>
+                  I consent to the collection, processing and storage of Personal Data in accordance with the{' '}
+                  <a href="https://bc-pf.org/docs/personaldata/list1-matomo.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#7a3afe' }}>
+                    List No. 03-08/01
+                  </a>
+                  . The{' '}
+                  <a href="https://bc-pf.org/personaldata" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#7a3afe' }}>
+                    Foundation's Personal Data Policy and List
+                  </a>{' '}
+                  can be found on the Foundation's website.
+                </span>
+              </label>
             </form>
           </div>
         </div>

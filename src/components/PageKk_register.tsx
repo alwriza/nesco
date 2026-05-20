@@ -405,7 +405,7 @@ export default function PageKkRegister() {
             <p className="rn-hero__tag">NEScO 2026 — Тіркелу</p>
             <h1 className="rn-hero__title">Командаңызды тіркеңіз</h1>
             <p className="rn-hero__sub">
-              Олимпиада 8–12 сынып оқушыларынан құралған 4 адамдық командалар үшін ашық.
+              Олимпиада 9–12 сынып оқушыларынан құралған 4-5 адамдық командалар үшін ашық.
               Команданы тіркеу үшін төмендегі форманы толтырыңыз — командаңыздың атауы бірегей болуы тиіс.
             </p>
           </div>
@@ -413,7 +413,7 @@ export default function PageKkRegister() {
         {/* FORM */}
         <div className="rn-body">
           <div className="rn-body__inner">
-            <form id="regForm" noValidate>
+            <form id="regForm">
               <div className="rn-section">
                 <div className="rn-section__num">1</div>
                 <h2 className="rn-section__title">Команда туралы ақпарат</h2>
@@ -439,7 +439,6 @@ export default function PageKkRegister() {
                   <label htmlFor="p1Grade">Сынып *</label>
                   <select id="p1Grade" name="p1_grade" required>
                     <option value="">— таңдаңыз —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -470,13 +469,12 @@ export default function PageKkRegister() {
               <div className="rn-grid">
                 <div className="rn-field">
                   <label htmlFor="p2Name">Аты-жөні *</label>
-                  <input type="text" id="p2Name" name="p2_name" required />
+                  <input type="text" id="p2Name" name="p2_name" placeholder="Тегі Аты Әкесінің аты" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p2Grade">Сынып *</label>
                   <select id="p2Grade" name="p2_grade" required>
                     <option value="">— таңдаңыз —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -485,15 +483,15 @@ export default function PageKkRegister() {
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p2Email">Email *</label>
-                  <input type="email" id="p2Email" name="p2_email" required />
+                  <input type="email" id="p2Email" name="p2_email" placeholder="example@mail.com" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p2Phone">Телефон *</label>
-                  <input type="tel" id="p2Phone" name="p2_phone" required />
+                  <input type="tel" id="p2Phone" name="p2_phone" placeholder="+0 000 000 00 00" required />
                 </div>
                 <div className="rn-field rn-full">
                   <label htmlFor="p2School">Мектеп *</label>
-                  <input type="text" id="p2School" name="p2_school" required />
+                  <input type="text" id="p2School" name="p2_school" placeholder="Мектеп атауы және қаласы" required />
                 </div>
               </div>
 
@@ -507,13 +505,12 @@ export default function PageKkRegister() {
               <div className="rn-grid">
                 <div className="rn-field">
                   <label htmlFor="p3Name">Аты-жөні *</label>
-                  <input type="text" id="p3Name" name="p3_name" required />
+                  <input type="text" id="p3Name" name="p3_name" placeholder="Тегі Аты Әкесінің аты" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p3Grade">Сынып *</label>
                   <select id="p3Grade" name="p3_grade" required>
                     <option value="">— таңдаңыз —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -522,15 +519,15 @@ export default function PageKkRegister() {
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p3Email">Email *</label>
-                  <input type="email" id="p3Email" name="p3_email" required />
+                  <input type="email" id="p3Email" name="p3_email" placeholder="example@mail.com" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p3Phone">Телефон *</label>
-                  <input type="tel" id="p3Phone" name="p3_phone" required />
+                  <input type="tel" id="p3Phone" name="p3_phone" placeholder="+0 000 000 00 00" required />
                 </div>
                 <div className="rn-field rn-full">
                   <label htmlFor="p3School">Мектеп *</label>
-                  <input type="text" id="p3School" name="p3_school" required />
+                  <input type="text" id="p3School" name="p3_school" placeholder="Мектеп атауы және қаласы" required />
                 </div>
               </div>
 
@@ -544,13 +541,12 @@ export default function PageKkRegister() {
               <div className="rn-grid">
                 <div className="rn-field">
                   <label htmlFor="p4Name">Аты-жөні *</label>
-                  <input type="text" id="p4Name" name="p4_name" required />
+                  <input type="text" id="p4Name" name="p4_name" placeholder="Тегі Аты Әкесінің аты" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p4Grade">Сынып *</label>
                   <select id="p4Grade" name="p4_grade" required>
                     <option value="">— таңдаңыз —</option>
-                    <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                     <option value={11}>11</option>
@@ -559,22 +555,109 @@ export default function PageKkRegister() {
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p4Email">Email *</label>
-                  <input type="email" id="p4Email" name="p4_email" required />
+                  <input type="email" id="p4Email" name="p4_email" placeholder="example@mail.com" required />
                 </div>
                 <div className="rn-field">
                   <label htmlFor="p4Phone">Телефон *</label>
-                  <input type="tel" id="p4Phone" name="p4_phone" required />
+                  <input type="tel" id="p4Phone" name="p4_phone" placeholder="+0 000 000 00 00" required />
                 </div>
                 <div className="rn-field rn-full">
                   <label htmlFor="p4School">Мектеп *</label>
-                  <input type="text" id="p4School" name="p4_school" required />
+                  <input type="text" id="p4School" name="p4_school" placeholder="Мектеп атауы және қаласы" required />
                 </div>
               </div>
 
-              <label className="rn-consent">
-                <input type="checkbox" id="consent" required />
-                <span>Мен жеке деректерді өңдеуге келісім беремін және команданың NEScO 2026-ке қатысуын растаймын.</span>
-              </label>
+              <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+                <button 
+                  type="button" 
+                  id="addP5Btn"
+                  style={{ 
+                    background: 'none', 
+                    border: '1px dashed #7a3afe', 
+                    color: '#7a3afe', 
+                    padding: '0.5rem 1rem', 
+                    borderRadius: '6px', 
+                    cursor: 'pointer',
+                    fontFamily: 'Roboto, sans-serif',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                  onClick={(e) => {
+                    const p5Section = document.getElementById('p5-section');
+                    const addBtn = document.getElementById('addP5Btn');
+                    if (p5Section && addBtn) {
+                      p5Section.style.display = 'block';
+                      addBtn.style.display = 'none';
+                      ['p5Name', 'p5Grade', 'p5Email', 'p5Phone', 'p5School'].forEach(id => {
+                        const el = document.getElementById(id) as HTMLInputElement | HTMLSelectElement;
+                        if (el) el.required = true;
+                      });
+                    }
+                  }}
+                >
+                  + 5-ші қатысушыны қосу
+                </button>
+              </div>
+
+              <div id="p5-section" style={{ display: 'none' }}>
+                <hr className="rn-divider" />
+                <div className="rn-section">
+                  <div className="rn-section__num">6</div>
+                  <h2 className="rn-section__title">5-ші қатысушы (Міндетті емес)</h2>
+                  <button 
+                    type="button" 
+                    style={{
+                      background: 'none', border: 'none', color: '#e53e3e', cursor: 'pointer', fontSize: '14px', textDecoration: 'underline'
+                    }}
+                    onClick={(e) => {
+                      const p5Section = document.getElementById('p5-section');
+                      const addBtn = document.getElementById('addP5Btn');
+                      if (p5Section && addBtn) {
+                        p5Section.style.display = 'none';
+                        addBtn.style.display = 'inline-block';
+                        ['p5Name', 'p5Grade', 'p5Email', 'p5Phone', 'p5School'].forEach(id => {
+                          const el = document.getElementById(id) as HTMLInputElement | HTMLSelectElement;
+                          if (el) {
+                            el.required = false;
+                            el.value = '';
+                          }
+                        });
+                      }
+                    }}
+                  >
+                    Жою
+                  </button>
+                </div>
+                <div className="rn-grid">
+                  <div className="rn-field">
+                    <label htmlFor="p5Name">Аты-жөні *</label>
+                    <input type="text" id="p5Name" name="p5_name" placeholder="Тегі Аты Әкесінің аты" />
+                  </div>
+                  <div className="rn-field">
+                    <label htmlFor="p5Grade">Сынып *</label>
+                    <select id="p5Grade" name="p5_grade">
+                      <option value="">— таңдаңыз —</option>
+                      <option value={9}>9</option>
+                      <option value={10}>10</option>
+                      <option value={11}>11</option>
+                      <option value={12}>12</option>
+                    </select>
+                  </div>
+                  <div className="rn-field">
+                    <label htmlFor="p5Email">Email *</label>
+                    <input type="email" id="p5Email" name="p5_email" placeholder="example@mail.com" />
+                  </div>
+                  <div className="rn-field">
+                    <label htmlFor="p5Phone">Телефон *</label>
+                    <input type="tel" id="p5Phone" name="p5_phone" placeholder="+0 000 000 00 00" />
+                  </div>
+                  <div className="rn-field rn-full">
+                    <label htmlFor="p5School">Мектеп *</label>
+                    <input type="text" id="p5School" name="p5_school" placeholder="Мектеп атауы және қаласы" />
+                  </div>
+                </div>
+              </div>
+
               <div className="rn-submit-row">
                 <button type="submit" className="rn-submit" id="submitBtn">Команданы тіркеу</button>
                 <div className="rn-msg success" id="msgSuccess">
@@ -582,6 +665,21 @@ export default function PageKkRegister() {
                 </div>
                 <div className="rn-msg error" id="msgError">Тіркеу кезінде қате орын алды.</div>
               </div>
+
+              <label className="rn-consent" style={{ marginTop: '1.5rem' }}>
+                <input type="checkbox" id="consent" required />
+                <span>
+                  Мен{' '}
+                  <a href="https://bc-pf.org/docs/personaldata/list1-matomo.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#7a3afe' }}>
+                    №03-08/01 тізілімге
+                  </a>{' '}
+                  сәйкес Дербес деректерді жинауға, өңдеуге және сақтауға келісім беремін. Қордың дербес деректермен жұмыс істеу саясатымен және тізілімімен Қордың{' '}
+                  <a href="https://bc-pf.org/personaldata" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#7a3afe' }}>
+                    сайтында
+                  </a>{' '}
+                  танысуға болады.
+                </span>
+              </label>
             </form>
           </div>
         </div>
